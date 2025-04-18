@@ -1,0 +1,66 @@
+[
+  {
+      "name": "Kovai Medical Center and Hospital (KMCH)",
+      "lat": 11.0382,
+      "lng": 76.9989,
+      "capacity": 85,
+      "priority": 5,
+      "address": "Avinashi Road, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014"
+  },
+  {
+      "name": "PSG Hospitals",
+      "lat": 11.0315,
+      "lng": 77.0246,
+      "capacity": 90,
+      "priority": 5,
+      "address": "Avinashi Road, Peelamedu, Coimbatore, Tamil Nadu 641004"
+  },
+  {
+      "name": "Sri Ramakrishna Hospital",
+      "lat": 11.0210,
+      "lng": 77.0123,
+      "capacity": 75,
+      "priority": 4,
+      "address": "395, Sarojini Naidu Rd, New Siddhapudur, Coimbatore, Tamil Nadu 641044"
+  },
+  {
+      "name": "G. Kuppuswamy Naidu Memorial Hospital",
+      "lat": 11.0183,
+      "lng": 76.9732,
+      "capacity": 70,
+      "priority": 4,
+      "address": "P.N. Palayam, Coimbatore, Tamil Nadu 641037"
+  },
+  {
+      "name": "KG Hospital",
+      "lat": 11.0026,
+      "lng": 76.9629,
+      "capacity": 55,
+      "priority": 3,
+      "address": "KG Hospital, Arts College Road, Coimbatore, Tamil Nadu 641018"
+  },
+  {
+      "name": "Royal Care Super Speciality Hospital",
+      "lat": 11.0164,
+      "lng": 76.9872,
+      "capacity": 60,
+      "priority": 4,
+      "address": "No 1, Ramanathapuram, Trichy Road, Coimbatore, Tamil Nadu 641045"
+  },
+  {
+      "name": "Ganga Medical Centre & Hospitals",
+      "lat": 11.0079,
+      "lng": 76.9767,
+      "capacity": 65,
+      "priority": 4,
+      "address": "313, Mettupalayam Road, Coimbatore, Tamil Nadu 641043"
+  },
+  {
+      "name": "Coimbatore Medical College Hospital",
+      "lat": 11.0215,
+      "lng": 76.9446,
+      "capacity": 100,
+      "priority": 3,
+      "address": "Trichy Road, Coimbatore, Tamil Nadu 641018"
+  }
+]

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Path Ambulance Routing System</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-ambulance"></i> Shortest Path Ambulance Routing System</h1>
+        </header>
+        
+        <div class="content">
+            <div class="control-panel">
+                <div class="algorithm-selection">
+                    <h3>Algorithm Selection</h3>
+                    <select id="algorithm-select">
+                        <option value="tsp">TSP (Travelling Salesman Problem)</option>
+                        <option value="mst-prim">MST - Prim's Algorithm</option>
+                        <option value="mst-kruskal">MST - Kruskal's Algorithm</option>
+                        <option value="multistage">Multistage Graph Algorithm</option>
+                    </select>
+                    
+                    <h3>Emergency Level</h3>
+                    <select id="emergency-level">
+                        <option value="low">Low Emergency</option>
+                        <option value="medium" selected>Medium Emergency</option>
+                        <option value="high">High Emergency</option>
+                    </select>
+                    
+                    <div class="action-buttons">
+                        <button id="calculate-btn" class="action-btn">Calculate Route</button>
+                        <button id="compare-btn" class="action-btn">Compare All Algorithms</button>
+                        <button id="clear-ambulance-btn" class="action-btn">Clear Ambulance</button>
+                    </div>
+                    
+                    <div id="instructions">
+                        <h3>Instructions</h3>
+                        <ol>
+                            <li>Click on the map to set ambulance location</li>
+                            <li>Select an algorithm and emergency level</li>
+                            <li>Click "Calculate Route" to find the best hospital</li>
+                            <li>Or click "Compare All" to compare algorithms</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div id="results-panel">
+                    <h3>Results</h3>
+                    <div id="route-info">
+                        <p>Click on the map to set ambulance location.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div id="map"></div>
+                
+                <div id="hospital-cards-container">
+                    <h3>Hospital Information</h3>
+                    <div id="hospital-cards" class="cards-container">
+                        <!-- Hospital cards will be inserted here via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Templates for dynamic content -->
+    <template id="hospital-card-template">
+        <div class="hospital-card">
+            <h4 class="hospital-name"></h4>
+            <p class="hospital-address"></p>
+            <div class="hospital-details">
+                <p>Priority: <span class="priority-level"></span></p>
+                <p>Capacity: <span class="capacity-level"></span></p>
+            </div>
+            <button class="select-hospital-btn">Select as Destination</button>
+        </div>
+    </template>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
